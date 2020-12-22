@@ -3,14 +3,12 @@ import parselmouth
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-
-mysp = __import__("my-voice-analysis")
+import myprosody as mysp
 
 sns.set() # Use seaborn's default style to make attractive graphs
 plt.rcParams['figure.dpi'] = 100 # Show nicely large images in this notebook
 
-snd = parselmouth.Sound("audio/the_north_wind_and_the_sun.wav")
-
+snd = parselmouth.Sound("audio/OnRace.wav")
 
 plt.figure()
 plt.plot(snd.xs(), snd.values.T)
@@ -18,7 +16,6 @@ plt.xlim([snd.xmin, snd.xmax])
 plt.xlabel("time [s]")
 plt.ylabel("amplitude")
 plt.show() # or plt.savefig("sound.png"), or plt.savefig("sound.pdf")
-
 
 def draw_spectrogram(spectrogram, dynamic_range=70):
     X, Y = spectrogram.x_grid(), spectrogram.y_grid()

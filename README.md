@@ -4,6 +4,7 @@ Maintain code to analyze AAVE linguistic features in Muhammad Ali's speeches.
 
 ## To run locally:
 
-  1. Ensure all Python dependencies are downloaded.
-  2. Download and place the [audio](https://drive.google.com/drive/folders/1Y83e5_AoBqIesvn1d87ReHch9sIU78M0?usp=sharing) folder in you working directory.
-  3. Use differences.py to add/remove code.
+  0. Clone the repository.
+  1. Use differences.py to add/remove code.
+  2. Ensure all Python dependencies are downloaded.
+  3. Download and place [this](https://drive.google.com/drive/folders/1Y83e5_AoBqIesvn1d87ReHch9sIU78M0?usp=sharing) audio folder in your working directory.

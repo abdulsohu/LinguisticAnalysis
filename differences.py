@@ -101,7 +101,7 @@ plt.xlim([three_standard.xmin, three_standard.xmax])
 plt.savefig('three_standard.png')
 
 '''
-Analyzing "we gon' have no' mo' influence
+Analyzing "we gon' have no' mo' influence".
 '''
 
 shortening_aave = parselmouth.Sound("audio/aave/noMoreInfluence.wav")

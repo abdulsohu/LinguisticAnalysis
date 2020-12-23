@@ -49,7 +49,7 @@ sns.set() # Use seaborn's default style to make attractive graphs
 plt.rcParams['figure.dpi'] = 100 # Show nicely large images in this notebook
 
 '''
-Analysis of differences.
+The word "without" analyzed.
 '''
 
 without_aave = parselmouth.Sound("audio/aave/without.wav")
@@ -74,6 +74,10 @@ draw_intensity(intensity)
 plt.xlim([without_standard.xmin, without_standard.xmax])
 plt.savefig('without_standard.png')
 
+'''
+The word "three" analyzed.
+'''
+
 three_aave = parselmouth.Sound("audio/aave/three.wav")
 
 intensity = three_aave.to_intensity()
@@ -95,3 +99,29 @@ plt.twinx()
 draw_intensity(intensity)
 plt.xlim([three_standard.xmin, three_standard.xmax])
 plt.savefig('three_standard.png')
+
+'''
+Analyzing "we gon' have no' mo' influence
+'''
+
+shortening_aave = parselmouth.Sound("audio/aave/noMoreInfluence.wav")
+
+intensity = shortening_aave.to_intensity()
+spectrogram = shortening_aave.to_spectrogram()
+plt.figure()
+draw_spectrogram(spectrogram)
+plt.twinx()
+draw_intensity(intensity)
+plt.xlim([shortening_aave.xmin, shortening_aave.xmax])
+plt.savefig('shortening_aave.png')
+
+shortening_standard = parselmouth.Sound("audio/standard/noMoreInfluence.wav")
+
+intensity = shortening_standard.to_intensity()
+spectrogram = shortening_standard.to_spectrogram()
+plt.figure()
+draw_spectrogram(spectrogram)
+plt.twinx()
+draw_intensity(intensity)
+plt.xlim([shortening_standard.xmin, shortening_standard.xmax])
+plt.savefig('shortening_standard.png')
